@@ -36,30 +36,30 @@ The system is built using ASP.NET Core (MVC, Razor Pages, or Blazor) and Entity 
 
 ## Technical Requirements
 ### Backend
-- **Framework**: ASP.NET Core (MVC, Razor Pages, or Blazor).
+- **Framework**: ASP.NET Core (MVC, Razor Pages).
 - **Database Handling**: Entity Framework Core.
 - **Authentication**: ASP.NET Identity.
 - **Structure**: Repository Pattern (preferred).
 - **Database Management**: Use Migrations.
 
 ### Frontend
-- **UI Interactions**: JavaScript (Vanilla JS or jQuery).
-- **Styling**: Bootstrap (or Tailwind CSS).
+- **UI Interactions**: JavaScript (Vanilla JS).
+- **Styling**: Bootstrap.
 - **Form Submission**: AJAX for submitting exam answers without page reloads.
 
 ### Database
-- **Type**: SQL Server (or In-Memory DB for simplicity).
+- **Type**: SQL Server.
 - **Design**: Design the database structure based on the requirements.
 - **Management**: Use EF Core Migrations.
 
 ## Installation
 1. Clone the repository from GitHub:
    ```bash
-   git clone https://github.com/yourusername/online-exam-system.git
+   git clone https://github.com/FaresGomaa1/ExamSysttem.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd online-exam-system
+   cd ExamSysttem
    ```
 3. Restore the NuGet packages:
    ```bash
@@ -105,6 +105,6 @@ The system is built using ASP.NET Core (MVC, Razor Pages, or Blazor) and Entity 
 This project is licensed under the MIT License.
 
 ## Contact
-For any questions or feedback, please contact [your email].
+For any questions or feedback, please contact [fares.gomaa.work@gmail.com].
 
 ```
