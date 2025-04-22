@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 📝 Online Exam System (Admin Panel & User Website)
 
@@ -108,5 +106,3 @@ This project is open for learning and educational use. Free to use and extend.
 
 **Made with ❤️ by Fares Gomaa**
 ```
-
----
