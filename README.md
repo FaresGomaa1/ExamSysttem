@@ -1,108 +1,110 @@
-```markdown
-# 📝 Online Exam System (Admin Panel & User Website)
+# Online Exam System
 
-This project is a **mini online exam system** built with **ASP.NET Core MVC**, **Entity Framework Core**, and **ASP.NET Identity**. It enables administrators to manage exams and questions, and allows users to take exams and view their results.
+## Project Overview
+This project is a mini online exam system consisting of two main sections:
+1. **Admin Panel**: A secure area for administrators to manage exams and questions.
+2. **User Website**: A public-facing section where registered users can log in, take exams, and view their scores.
 
----
+The system is built using ASP.NET Core (MVC, Razor Pages, or Blazor) and Entity Framework Core, with authentication handled through ASP.NET Identity.
 
-## 🚀 Features
+## Key Features
+### Admin Panel
+- **Authentication**: Admins log in using ASP.NET Identity.
+- **Exam Management**: Create, edit, and delete exams.
+- **Question Management**: Add, edit, and delete questions for each exam. Each question includes:
+  - A title.
+  - Four choices.
+  - A correct answer.
+- **User Management**: Manually add users to the database (no self-registration).
 
-### 👨‍💼 Admin Panel
-- Secure login for administrators
-- Create, edit, and delete exams
-- Add, edit, and delete questions with 4 choices and one correct answer
-- Manually add users to the system
+### User Website
+- **Login**: Users log in with credentials manually added to the database.
+- **Exam Selection**: View and select available exams.
+- **Exam Participation**: Take exams by answering multiple-choice questions.
+- **Score Viewing**: Submit exams and view scores.
 
-### 👤 User Website
-- Login with credentials (pre-added by admin)
-- View list of available exams
-- Take multiple-choice exams
-- Submit answers via AJAX for a smooth experience
-- View detailed results including:
-  - Score percentage
-  - Number of correct and incorrect answers
-  - Pass/Fail status
-  - Review of selected answers
+### Exam Evaluation Criteria
+- Each question is worth 1 point.
+- The final score is calculated as:
+  $$
+  \text{Score} = \left(\frac{\text{Correct Answers}}{\text{Total Questions}}\right) \times 100
+  $$
+- Passing percentage is 60%. The evaluation screen displays:
+  - Total score (in percentage).
+  - Number of correct vs. incorrect answers.
+  - Pass/Fail status.
 
-### 🧠 Exam Evaluation Logic
-- Each question is worth 1 point
-- Final Score = `(Correct Answers / Total Questions) * 100`
-- Passing threshold: **60%**
+## Technical Requirements
+### Backend
+- **Framework**: ASP.NET Core (MVC, Razor Pages, or Blazor).
+- **Database Handling**: Entity Framework Core.
+- **Authentication**: ASP.NET Identity.
+- **Structure**: Repository Pattern (preferred).
+- **Database Management**: Use Migrations.
 
----
+### Frontend
+- **UI Interactions**: JavaScript (Vanilla JS or jQuery).
+- **Styling**: Bootstrap (or Tailwind CSS).
+- **Form Submission**: AJAX for submitting exam answers without page reloads.
 
-## 🧱 Tech Stack
+### Database
+- **Type**: SQL Server (or In-Memory DB for simplicity).
+- **Design**: Design the database structure based on the requirements.
+- **Management**: Use EF Core Migrations.
 
-- **Backend**: ASP.NET Core MVC (.NET 8+), Entity Framework Core, ASP.NET Identity
-- **Frontend**: Razor Views, Bootstrap, jQuery/AJAX
-- **Database**: SQL Server (LocalDB or full SQL Server)
-- **Authentication**: ASP.NET Identity with pre-created users
-
----
-
-## 📁 Project Structure
-
-```
-ExamSysttem/
-├── Controllers/
-├── Models/
-├── Data/
-│   └── ApplicationDbContext.cs
-├── Views/
-│   └── Admin, Exam, Account, Shared, etc.
-├── wwwroot/
-├── Migrations/
-├── appsettings.json
-└── Program.cs
-```
-
----
-
-## ⚙️ Setup Instructions
-
-1. **Clone the repository**
+## Installation
+1. Clone the repository from GitHub:
    ```bash
-   git clone https://github.com/your-username/online-exam-system.git
+   git clone https://github.com/yourusername/online-exam-system.git
+   ```
+2. Navigate to the project directory:
+   ```bash
    cd online-exam-system
    ```
-
-2. **Update the database**
+3. Restore the NuGet packages:
+   ```bash
+   dotnet restore
+   ```
+4. Update the database using EF Core Migrations:
    ```bash
    dotnet ef database update
    ```
-
-3. **Run the application**
+5. Run the project:
    ```bash
    dotnet run
    ```
 
-4. **Login with predefined user**
-   - Default admin/user credentials should be seeded manually or via migration
+## Usage
+### Admin Panel
+1. Log in using admin credentials.
+2. Manage exams and questions through the admin interface.
+3. Manually add users to the database.
 
----
+### User Website
+1. Log in using user credentials.
+2. Select and take available exams.
+3. Submit exams and view scores.
 
-## 📌 Important Notes
+## Contributing
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-branch
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-branch
+   ```
+5. Create a pull request.
 
-- No user self-registration — all users are added manually by the admin
-- The project uses clean architecture with a separation of concerns
-- Cascading deletes are restricted to avoid multiple cascade paths in the database
+## License
+This project is licensed under the MIT License.
 
----
+## Contact
+For any questions or feedback, please contact [your email].
 
-## 📈 Future Enhancements
-
-- Add roles for admin/user and role-based authorization
-- Add question categories or tags
-- Include exam time limits and timers
-- Add PDF result export or printable certificates
-
----
-
-## 📄 License
-
-This project is open for learning and educational use. Free to use and extend.
-
----
-
-**Made with ❤️ by Fares Gomaa**
 ```
