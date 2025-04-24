@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ExamSysttem.ViewModels.QuestionReadForAdmin>
+
+<h2>Questions</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Text</th>
+            <th>Choice A</th>
+            <th>Choice B</th>
+            <th>Choice C</th>
+            <th>Choice D</th>
+            <th>Correct Answer</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var question in Model)
+        {
+            <tr>
+                <td>@question.QuestionText</td>
+                <td>@question.ChoiceA</td>
+                <td>@question.ChoiceB</td>
+                <td>@question.ChoiceC</td>
+                <td>@question.ChoiceD</td>
+                <td>@question.CorrectAnswer</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@question.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@question.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Create" class="btn btn-success">Create New Question</a>

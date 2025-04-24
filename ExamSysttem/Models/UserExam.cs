@@ -21,8 +21,5 @@ namespace ExamSysttem.Models
         public bool Passed { get; set; }
 
         public DateTime SubmittedAt { get; set; }
-
-        // Navigation property
-        public virtual ICollection<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
     }
 }

@@ -1,0 +1,36 @@
+﻿@model ExamSysttem.ViewModels.QuestionCreate
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="QuestionText"></label>
+        <input asp-for="QuestionText" class="form-control" />
+        <span asp-validation-for="QuestionText" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ChoiceA"></label>
+        <input asp-for="ChoiceA" class="form-control" />
+        <span asp-validation-for="ChoiceA" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ChoiceB"></label>
+        <input asp-for="ChoiceB" class="form-control" />
+        <span asp-validation-for="ChoiceB" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ChoiceC"></label>
+        <input asp-for="ChoiceC" class="form-control" />
+        <span asp-validation-for="ChoiceC" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ChoiceD"></label>
+        <input asp-for="ChoiceD" class="form-control" />
+        <span asp-validation-for="ChoiceD" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CorrectAnswer"></label>
+        <input asp-for="CorrectAnswer" class="form-control" />
+        <span asp-validation-for="CorrectAnswer" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="ExamId" value="@ViewBag.ExamId" />
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
